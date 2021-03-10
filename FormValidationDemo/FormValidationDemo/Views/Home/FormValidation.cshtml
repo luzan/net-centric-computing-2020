@@ -51,11 +51,11 @@
             return false;
         }
 
-        @*if (IsEmailAddress(email)) {
-            document.getElementById("errName").innerHTML = "Enter valid Email";
+        if (!IsEmailAddress(email)) {
+            document.getElementById("errName").innerHTML = "Enter Valid Email";
             validationDemo.txtEmail.focus();
             return false;
-        }*@
+        }
         
         var phone = document.validationDemo.txtPhone.value;
         if (phone.length != 10) {
@@ -63,6 +63,7 @@
             validationDemo.txtPhone.focus();
             return false;
         }
+        document.getElementById("errName").innerHTML = "All data validated";
         return true;
     }
 </script>

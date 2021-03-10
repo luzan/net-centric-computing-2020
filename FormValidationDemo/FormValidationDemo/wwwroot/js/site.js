@@ -3,13 +3,14 @@
 
 // Write your JavaScript code.
 
-function IsEmailAddress(txtEmailID) {
-    var emlRegex = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-    var txtemail = document.getElementById(txtEmailID);
-    if (mob.test(txtemail.value) == false) {
-        alert("Please enter correct email.");
-        txtemail.focus();
+function IsEmailAddress(email) {
+    //var emlRegex = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+    atpos = email.indexOf("@");
+    dotpos = email.indexOf(".");
+    if (atpos < 1 || (dotpos - atpos < 2)) {
         return false;
     }
+
     return true;
 }
