@@ -1,0 +1,71 @@
+﻿@{
+    ViewData["Title"] = "Form Validation";
+}
+<style type="text/css">
+    .error {
+        color: #721c24;
+        background-color: #f8d7da;
+        border-color: #f5c6cb;
+    }
+</style>
+<div class="text-center">
+    <h1 class="display-4">Form Validation</h1>
+    <div class="error" id="errName">
+    </div>
+</div>
+<form name="validationDemo" onsubmit="return validate()">
+    <div class="mb-3">
+        <label for="inputName" class="form-label">Name</label>
+        <input type="text" class="form-control" id="inputName" name="FullName" aria-describedby="nameHelp">
+        <div id="nameHelp" class="form-text">Enter your full name.</div>
+    </div>
+    <div class="mb-3">
+        <label for="inputEmail" class="form-label">Email address</label>
+        <input type="text" class="form-control" id="inputEmail" name="txtEmail" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <div class="mb-3">
+        <label for="phoneNumber" class="form-label">Mobile no.</label>
+        <input type="text" class="form-control" id="phoneNumber" name="txtPhone" aria-describedby="phoneHelp">
+        <div id="phoneHelp" class="form-text">Enter 10 digit Mobile number.</div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+@section Scripts {
+<script type="text/javascript">
+    function validate() {
+        var name = document.validationDemo.FullName.value;
+        if (name == "") {
+            document.getElementById("errName").innerHTML = "Name is required";
+            validationDemo.FullName.focus();
+            return false;
+        } else {
+            document.getElementById("errName").innerHTML = "";
+        }
+
+        var email = document.validationDemo.txtEmail.value;
+
+        if (email == "") {
+            document.getElementById("errName").innerHTML = "Email is required";
+            validationDemo.txtEmail.focus();
+            return false;
+        }
+
+        @*if (IsEmailAddress(email)) {
+            document.getElementById("errName").innerHTML = "Enter valid Email";
+            validationDemo.txtEmail.focus();
+            return false;
+        }*@
+        
+        var phone = document.validationDemo.txtPhone.value;
+        if (phone.length != 10) {
+            document.getElementById("errName").innerHTML = "Invalid Mobile Number";
+            validationDemo.txtPhone.focus();
+            return false;
+        }
+        return true;
+    }
+</script>
+}
+
+
