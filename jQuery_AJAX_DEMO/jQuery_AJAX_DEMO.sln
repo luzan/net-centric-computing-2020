@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.809.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jQuery_AJAX_DEMO", "jQuery_AJAX_DEMO\jQuery_AJAX_DEMO.csproj", "{F1DA132E-3E10-43B6-8BAD-C7A2D94F17FA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F1DA132E-3E10-43B6-8BAD-C7A2D94F17FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1DA132E-3E10-43B6-8BAD-C7A2D94F17FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1DA132E-3E10-43B6-8BAD-C7A2D94F17FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1DA132E-3E10-43B6-8BAD-C7A2D94F17FA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7B524FB1-6158-4E7E-A050-38B28708011F}
+	EndGlobalSection
+EndGlobal

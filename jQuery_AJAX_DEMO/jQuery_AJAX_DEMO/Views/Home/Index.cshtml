@@ -1,0 +1,65 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>When you enter your name </p>
+    <input type="text" id="txtName" />
+    <input type="button" id="btnGet" value="Get Current Time" />
+    
+</div>
+<div id="events" class="events">
+</div>
+<style>
+    .HTTP {
+        background-color: rgba(15, 0, 82, 0.7);
+    }
+
+    .DOM {
+        background-color: rgba(1, 80, 18, 0.7);
+    }
+
+    pre {
+        color: white;
+        font-weight: 500;
+        padding: 15px;
+        margin-bottom: 15px;
+        font-size: 14px;
+        overflow: auto;
+    }
+    .events{
+        margin-top:15px;
+    }
+</style>
+
+@section Scripts {
+    <script type="text/javascript" src="~/lib/jquery/dist/jquery.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#btnGet").click(function () {
+                $.ajax({
+                    type: "POST",
+                    url: "/Home/AjaxMethod",
+                    dataType: "json",
+                    data: { "name": $("#txtName").val() },
+                    success: function (response) {
+
+                        const pre = document.createElement("pre")
+                        pre.classList.add('DOM')
+                        const code = document.createElement("code")
+                        code.innerHTML = JSON.stringify(response, null, 2)
+                        pre.appendChild(code)
+                        document.getElementById("events").appendChild(pre)
+
+                    },
+                    failure: function (response) {
+                        alert(response.responseText);
+                    },
+                    error: function (response) {
+                        alert(response.responseText);
+                   }
+                });
+            });
+        });</script>
+}

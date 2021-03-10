@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "Qnc/0Y0efxf1UaKNmqRnzUpfvwVHjZOPnLt3soP2dqCD8tIKG3D1+I7/IX0yIw3oboW2XWp0poxwdBxpvJbfXg==",
+  "success": true,
+  "projectFilePath": "/Users/bijaya/Projects/jQuery_AJAX_DEMO/jQuery_AJAX_DEMO/jQuery_AJAX_DEMO.csproj",
+  "expectedPackageFiles": [
+    "/Users/bijaya/.nuget/packages/microsoft.aspnetcore.jsonpatch/3.1.12/microsoft.aspnetcore.jsonpatch.3.1.12.nupkg.sha512",
+    "/Users/bijaya/.nuget/packages/microsoft.aspnetcore.mvc.newtonsoftjson/3.1.12/microsoft.aspnetcore.mvc.newtonsoftjson.3.1.12.nupkg.sha512",
+    "/Users/bijaya/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
+    "/Users/bijaya/.nuget/packages/newtonsoft.json/12.0.2/newtonsoft.json.12.0.2.nupkg.sha512",
+    "/Users/bijaya/.nuget/packages/newtonsoft.json.bson/1.0.2/newtonsoft.json.bson.1.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
